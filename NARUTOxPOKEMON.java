@@ -67,7 +67,7 @@ public class NARUTOxPOKEMON {
         }
     }
     public static void kakashiTutorial(String[] attacksLEE, Scanner in, String playerName, Fighters Kakashi, Fighters player){
-        System.out.println("Welcome to the HiddenLeaf, " + playerName + ". My Name is Kakashi and today I will be teaching you how to fight.");
+        System.out.println("Welcome to the HiddenLeaf, " + playerName + ". My name is Kakashi and today I will be teaching you how to fight.");
         System.out.println("First we will start off with a simple attack.");
         System.out.println("Simple attacks do 100% of your attack Power when you attack the enemy. Try it out.");
         System.out.println("Please input 0 to do a simple attack.");
@@ -128,14 +128,14 @@ public class NARUTOxPOKEMON {
         Fighters realPlayer = new Fighters(100.0, 25.0, playerName, clanChoice);
         Fighters Zabuza = new Fighters(75.0, 15.0, "Zabuza", attacksZabuza);
         System.out.println("Your first test is a fight against Zabuza.");
-        System.out.println("Zabuza is an assassin who is known for his unique style of hiding in mist that he creats.");
+        System.out.println("Zabuza is an assassin who is known for his unique style of hiding in mist that he creates.");
         fight(in, realPlayer, clanChoice, attacksZabuza, Zabuza);
         System.out.println("You've leveled up, your power has gone up by 10.");
         realPlayer.setHP(115.0);
         System.out.println("Your health has gone up by 15");
         Fighters Pain = new Fighters(125.0, 20.0, "Pain", attacksPain);
         System.out.println("You will now fight Pain");
-        System.out.println("Pain is the leader of an gang that is trying to kill you. Make sure to choose your attacks wisely.");
+        System.out.println("Pain is the leader of a gang that is trying to kill you. Make sure to choose your attacks wisely.");
         System.out.println("If you die, you will have to restart.");
         fight(in, realPlayer, clanChoice, attacksPain, Pain);
         System.out.println("You've leveled up, your power has gone up by 10.");
@@ -161,3 +161,10 @@ public class NARUTOxPOKEMON {
        // }
     }
 }
+
+
+//Just changed some typos in lines 131 and 138 of the game file
+//I love the story line!
+//There's a bug where if the user's HP falls below 0, they still get another attack before game over
+//It looks like the final fight will be against kakashi? that would be cool.
+//If not, having some text that explains you beat the game would be nice
