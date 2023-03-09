@@ -14,7 +14,8 @@ public class NARUTOxPOKEMON {
                 System.out.println(other.getName() + "'s health is now " + other.getHP());
                 System.out.println(other.getName() + " used " + otherAttacks[x]);
                 other.villianAttack(other.getPOW(), realPlayer);
-                System.out.println(realPlayer.getName() + "'s heath is now " + realPlayer.getHP());
+                if(realPlayer.getHP()>0){
+                System.out.println(realPlayer.getName() + "'s heath is now " + realPlayer.getHP());}
             }
             else if(x == 1){
                 System.out.println(realPlayer.getName() + " used " + clanChoice[x]);
@@ -22,7 +23,8 @@ public class NARUTOxPOKEMON {
                 System.out.println(other.getName() + "'s health is now " + other.getHP());
                 System.out.println(other.getName() + " used " + otherAttacks[x]);
                 other.villianAttack(other.getPOW(), realPlayer);
-                System.out.println(realPlayer.getName() + "'s heath is now " + realPlayer.getHP());
+                if(realPlayer.getHP()>0){
+                System.out.println(realPlayer.getName() + "'s heath is now " + realPlayer.getHP());}
             }
             else if(x == 2){
                 System.out.println(realPlayer.getName() + " used " + clanChoice[x]);
@@ -30,7 +32,8 @@ public class NARUTOxPOKEMON {
                 System.out.println(other.getName() + "'s health is now " + other.getHP());
                 System.out.println(other.getName() + " used " + otherAttacks[x]);
                 other.villianAttack(other.getPOW(), realPlayer);
-                System.out.println(realPlayer.getName() + "'s heath is now " + realPlayer.getHP());
+                if(realPlayer.getHP()>0){
+                System.out.println(realPlayer.getName() + "'s heath is now " + realPlayer.getHP());}
             }
         }
         if(other.getHP() <= 0){
@@ -142,7 +145,9 @@ public class NARUTOxPOKEMON {
         Fighters Kaguya = new Fighters(200.0, 20.0, "Kaguya", attacksKAGUYA);
         System.out.println("Kaguya is one of the strongest beings in the universe, be careful. You will likely die.");
         fight(in, realPlayer, clanChoice, attacksKAGUYA, Kaguya);
-        
+        System.out.println("Now, for your last battle, you will fight your master Kakashi. This should be easy, you are the best ninja in the world!!");
+        Kakashi.setPOW(50.0);
+        fight(in, realPlayer, clanChoice, attacksKAKASHI, Kakashi);
 
 
 
