@@ -74,12 +74,12 @@ public class NARUTOxPOKEMON {
         }
     }
     public static void kakashiTutorial(String[] attacksLEE, Scanner in, String playerName, Fighters Kakashi, Fighters player){
-<<<<<<< HEAD
+
        //this tutorial explains how to fight as the player and gives a preview to the last fight.
         System.out.println("Welcome to the HiddenLeaf, " + playerName + ". My Name is Kakashi and today I will be teaching you how to fight.");
-=======
+
         System.out.println("Welcome to the HiddenLeaf, " + playerName + ". My name is Kakashi and today I will be teaching you how to fight.");
->>>>>>> 0d06d90bdb72b3d488cb7e5c2282efd1772218f7
+
         System.out.println("First we will start off with a simple attack.");
         System.out.println("Simple attacks do 100% of your attack Power when you attack the enemy. Try it out.");
         System.out.println("Please input 0 to do a simple attack.");
