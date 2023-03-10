@@ -1,20 +1,22 @@
 import java.util.*;
 public class NARUTOxPOKEMON {
     public static void fight(Scanner in, Fighters realPlayer, String[] clanChoice, String[] otherAttacks, Fighters other){
+        //the fight method is a method that makes fights for the game. It intakes the real player and an empty opponnet. 
         while(other.getHP() > 0){   
-            System.out.println("Please choose an attack. Remember the Tutorial!");
+            System.out.println("Please choose an attack. Remember the Tutorial!"); //makes sure it only runs while the characters are alive.
             int x = in.nextInt();
             if(realPlayer.getHP() <= 0){
                 System.out.println("You Died, you have to restart.");
                 break;
             }
+            //the next three are attack choices the player makes. 
             else if(x == 0){
                 System.out.println(realPlayer.getName() + " used " + clanChoice[x]);
                 realPlayer.simpleAttack(realPlayer.getPOW(), other);
                 System.out.println(other.getName() + "'s health is now " + other.getHP());
                 System.out.println(other.getName() + " used " + otherAttacks[x]);
                 other.villianAttack(other.getPOW(), realPlayer);
-                if(realPlayer.getHP()>0){
+                if(realPlayer.getHP()>0){ //fixes the bug with printing the players health when they have no heath
                 System.out.println(realPlayer.getName() + "'s heath is now " + realPlayer.getHP());}
             }
             else if(x == 1){
@@ -36,6 +38,7 @@ public class NARUTOxPOKEMON {
                 System.out.println(realPlayer.getName() + "'s heath is now " + realPlayer.getHP());}
             }
         }
+       //this resets the player's health after the battle. 
         if(other.getHP() <= 0){
             System.out.println("You Won");
             realPlayer.setHP(100.0);
@@ -43,6 +46,7 @@ public class NARUTOxPOKEMON {
         }
     }
     public static void clanChoice(String[] clanChoice, Scanner in, String[] attacksNARA, String[] attacksLEE, String[] attacksUchiha, String[] attacksUzumaki){
+        //these allow the player to choose what clan they would like to be apart of. The different choices are mapped to numbers to make choosing easier.
         int x = in.nextInt();
         if(x == 0){
             clanChoice[0] = attacksNARA[0];
@@ -70,6 +74,7 @@ public class NARUTOxPOKEMON {
         }
     }
     public static void kakashiTutorial(String[] attacksLEE, Scanner in, String playerName, Fighters Kakashi, Fighters player){
+       //this tutorial explains how to fight as the player and gives a preview to the last fight.
         System.out.println("Welcome to the HiddenLeaf, " + playerName + ". My Name is Kakashi and today I will be teaching you how to fight.");
         System.out.println("First we will start off with a simple attack.");
         System.out.println("Simple attacks do 100% of your attack Power when you attack the enemy. Try it out.");
@@ -148,7 +153,7 @@ public class NARUTOxPOKEMON {
         System.out.println("Now, for your last battle, you will fight your master Kakashi. This should be easy, you are the best ninja in the world!!");
         Kakashi.setPOW(50.0);
         fight(in, realPlayer, clanChoice, attacksKAKASHI, Kakashi);
-
+        //the last fight is unwinable and it is meant to frustrate the player.
 
 
         
